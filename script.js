@@ -12,8 +12,8 @@ const passwordInputValue = document.getElementById('senha').value;
 entrarBtn.addEventListener('click', checkLogin);
 
 // Requisito 18
-const agreementState = document.getElementById('agreement');
 const enviarBtn = document.getElementById('submit-btn');
+const agreementCheck = document.getElementById('agreement');
 function enviarBtnState() {
   const agreementCheckValue = document.getElementById('agreement').checked;
   if (agreementCheckValue === true) {
@@ -24,6 +24,17 @@ function enviarBtnState() {
   }
 }
 agreementState.addEventListener('click', enviarBtnState);
+
+// Requisito 20
+const textArea = document.getElementById('textarea');
+const contador = document.getElementById('counter');
+
+function countTextArea() {
+  contador.value = 500 - textArea.textLength;
+  contador.innerText = 500 - textArea.textLength;
+}
+countTextArea();
+textArea.addEventListener('keyup', countTextArea);
 
 //Requisito 21
 function sendForm(e) {
