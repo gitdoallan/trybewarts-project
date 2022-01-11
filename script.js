@@ -44,22 +44,20 @@ function sendForm(e) {
   const email = document.getElementById('input-email').value;
   const familia = document.querySelector('.family:checked').value;
   const casa = document.getElementById('house').value;
-  const materias = document.querySelectorAll('.materias:checked');
+  const materias = document.querySelectorAll('.subject:checked');
   const avaliacao = document.querySelector('.rate:checked').value;
   const observacao = document.getElementById('textarea').value;
-  let materiasSelection = ''
+  let materiasSelection = []
   for (let i=0; i<materias.length; i+=1) {
-    materiasSelection += `${materias[i].value} `
+    materiasSelection.push(materias[i].value)
   }
   const theForm = document.getElementById('evaluation-form');
-  theForm.innerHTML = `
-  <p>Nome: ${nome} ${sobrenome}</p>
+  theForm.innerHTML = `<p>Nome: ${nome} ${sobrenome}</p>
   <p>Email: ${email}</p>
   <p>Casa: ${casa}</p>
   <p>Família: ${familia}</p>
   <p>Matérias: ${materiasSelection}</p>
   <p>Avaliação: ${avaliacao}</p>
-  <p>Observações: ${observacao}</p>
-  `
+  <p>Observações: ${observacao}</p>`
 }
 enviarBtn.addEventListener('click', sendForm);
