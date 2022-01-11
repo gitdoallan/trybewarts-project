@@ -1,3 +1,4 @@
+// Requisito 3
 const entrarBtn = document.getElementById('login');
 function checkLogin() {
 const emailInputValue = document.getElementById('email').value;
@@ -9,3 +10,17 @@ const passwordInputValue = document.getElementById('senha').value;
   }
 }
 entrarBtn.addEventListener('click', checkLogin);
+
+// Requisito 18
+const enviarBtn = document.getElementById('submit-btn');
+const agreementCheck = document.getElementById('agreement');
+function enviarBtnState() {
+  const agreementCheckValue = document.getElementById('agreement').checked;
+  if (agreementCheckValue === true) {
+    enviarBtn.disabled = false;
+  }
+  if (agreementCheckValue === false) {
+    enviarBtn.disabled = true;
+  }
+}
+agreementCheck.addEventListener('click', enviarBtnState);
