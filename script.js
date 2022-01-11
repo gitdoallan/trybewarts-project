@@ -12,8 +12,8 @@ const passwordInputValue = document.getElementById('senha').value;
 entrarBtn.addEventListener('click', checkLogin);
 
 // Requisito 18
+const agreementState = document.getElementById('agreement');
 const enviarBtn = document.getElementById('submit-btn');
-const agreementCheck = document.getElementById('agreement');
 function enviarBtnState() {
   const agreementCheckValue = document.getElementById('agreement').checked;
   if (agreementCheckValue === true) {
@@ -23,4 +23,4 @@ function enviarBtnState() {
     enviarBtn.disabled = true;
   }
 }
-agreementCheck.addEventListener('click', enviarBtnState);
+agreementState.addEventListener('click', enviarBtnState);
