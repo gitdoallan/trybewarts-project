@@ -51,6 +51,7 @@ function sendForm(e) {
   for (let i=0; i<materias.length; i+=1) {
     materiasSelection.push(materias[i].value)
   }
+  materiasSelection = materiasSelection.join(', ')
   const theForm = document.getElementById('evaluation-form');
   theForm.innerHTML = `<p>Nome: ${nome} ${sobrenome}</p>
   <p>Email: ${email}</p>
