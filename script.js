@@ -13,7 +13,7 @@ entrarBtn.addEventListener('click', checkLogin);
 
 // Requisito 18
 const enviarBtn = document.getElementById('submit-btn');
-const agreementCheck = document.getElementById('agreement');
+const agreementState = document.getElementById('agreement');
 function enviarBtnState() {
   const agreementCheckValue = document.getElementById('agreement').checked;
   if (agreementCheckValue === true) {
