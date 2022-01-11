@@ -14,7 +14,15 @@
   display: flex;
 }
 
-.container {
+.main-container {
+  display: flex;
+}
+
+.sub-container {
+  display: flex;
+}
+
+.form-container {
   display: flex;
 }
 
